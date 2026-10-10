@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethik Daily Progress Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">E</div>
+      <div>
+        <h1>ETHIK <span>TRACKER</span></h1>
+        <p>Your day. Your progress.</p>
+      </div>
+    </div>
+    <div class="live-label"><span class="dot"></span> PERSONAL DASHBOARD</div>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">DAILY PERFORMANCE</p>
+        <h2>Make every hour <span>count.</span></h2>
+        <p class="muted">Track your activities, build good habits, and review your day.</p>
+      </div>
+      <div class="date-box">
+        <label for="reportDate">SELECT DATE</label>
+        <input type="date" id="reportDate">
+      </div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card">
+        <p>RECORDED TIME</p>
+        <h3 id="totalTime">0h 0m</h3>
+        <small>Time assigned to activities</small>
+      </article>
+      <article class="stat-card">
+        <p>STUDY TIME</p>
+        <h3 id="studyTime">0h 0m</h3>
+        <small>Time spent studying</small>
+      </article>
+      <article class="stat-card">
+        <p>HOURS COMPLETED</p>
+        <h3 id="completedHours">0 / 24</h3>
+        <small>Hourly slots recorded</small>
+      </article>
+      <article class="stat-card">
+        <p>DAY PROGRESS</p>
+        <h3 id="dayProgress">0%</h3>
+        <div class="progress-track">
+          <div id="progressFill"></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR ROUTINE</p>
+          <h2>Hourly Activity Log</h2>
+        </div>
+        <button class="primary-btn" id="saveButton">Save Day</button>
+      </div>
+      <p class="muted help">Choose the main activity and record how many minutes you spent in each hour.</p>
+      <div id="hourlyRecords" class="hourly-list"></div>
+      <div class="actions">
+        <button class="secondary-btn" id="clearButton">Clear This Day</button>
+        <button class="primary-btn" id="saveBottomButton">Save All Changes</button>
+      </div>
+      <p id="saveStatus" class="status" aria-live="polite">Changes are saved in this browser when you press Save.</p>
+    </section>
+
+    <section class="two-column">
+      <article class="panel">
+        <p class="eyebrow">YOUR TIME BREAKDOWN</p>
+        <h2>Activity Summary</h2>
+        <p class="muted">Based on the minutes recorded for the selected day.</p>
+        <div id="categorySummary" class="summary-list"></div>
+      </article>
+
+      <article class="panel">
+        <p class="eyebrow">DAILY REFLECTION</p>
+        <h2>Notes & Goals</h2>
+        <label for="dailyNotes">What did you learn or achieve today?</label>
+        <textarea id="dailyNotes" rows="5" placeholder="Write about your study, achievements, and plans..."></textarea>
+        <label for="tomorrowGoal">Goal for tomorrow</label>
+        <input id="tomorrowGoal" type="text" placeholder="Example: Revise mathematics">
+        <button class="primary-btn full-btn" id="saveNotesButton">Save Notes</button>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PAST RECORDS</p>
+          <h2>Daily History</h2>
+        </div>
+        <button class="secondary-btn" id="refreshHistoryButton">Refresh</button>
+      </div>
+      <div id="historyList" class="history-list"></div>
+    </section>
+
+    <footer>
+      <p>ETHIK DAILY PROGRESS TRACKER</p>
+      <small>Build consistency, one hour at a time.</small>
+      <p class="privacy-note">Local version: records are stored in this browser on this device.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
